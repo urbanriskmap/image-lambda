@@ -5,6 +5,7 @@
       "height": 200,
       "sourceDir": "originals",
       "targetDir": "resized",
+      "format": "jpg",
       "ACL": "public-read"
     }
   ]
