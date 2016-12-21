@@ -3,6 +3,7 @@
     {
       "width": 200,
       "height": 200,
+      "resizeOption": "^",
       "sourceDir": "originals",
       "targetDir": "resized",
       "format": "jpg",
