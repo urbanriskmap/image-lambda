@@ -1,0 +1,11 @@
+{
+  "resizes": [
+    {
+      "width": 200,
+      "height": 200,
+      "sourceDir": "originals",
+      "targetDir": "resized",
+      "ACL": "public-read"
+    }
+  ]
+}
