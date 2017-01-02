@@ -11,7 +11,7 @@
     "build": "./build.sh",
     "vagrant:build": "./vagrant_build.sh"
   },
-  "author": "Chen Liang",
+  "author": "Chen Liang, Matthew Berryman",
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.7.20",
@@ -28,6 +28,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:slimfancy/image-lambda.git"
+    "url": "git@github.com:urbanriskmap/image-lambda.git"
   }
 }
