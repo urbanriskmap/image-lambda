@@ -14,16 +14,16 @@
   "author": "Chen Liang",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.3.9",
-    "gm": "^1.22.0",
-    "imagemin": "^5.1.1",
+    "aws-sdk": "^2.7.20",
+    "gm": "^1.23.0",
+    "imagemin": "^5.2.2",
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-pngquant": "^5.0.0"
   },
   "devDependencies": {
-    "aws-sdk-mock": "^1.0.10",
+    "aws-sdk-mock": "^1.6.1",
     "chai": "^3.5.0",
-    "mocha": "^2.4.5",
+    "mocha": "^3.2.0",
     "mkdirp": "latest"
   },
   "repository": {
