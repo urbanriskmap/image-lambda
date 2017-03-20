@@ -1,0 +1,60 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: image-lambda # NOTE: update this with your service name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+# you can overwrite defaults here
+  stage: dev
+  region: ap-southeast-2
+
+  iamRoleStatements:
+    -  Effect: "Allow"
+       Action:
+         - "s3:PutBucketNotification"
+         - "s3:ListBucket"
+         - "s3:GetObject"
+       Resource: "arn:aws:s3:::acrossthecloud-image-lambda/originals/*"
+    -  Effect: "Allow"
+       Action:
+         - "s3:PutBucketNotification"
+         - "s3:ListBucket"
+         - "s3:PutObject"
+         - "s3:PutObjectAcl"
+       Resource: "arn:aws:s3:::acrossthecloud-image-lambda/resized/*"
+
+# you can define service wide environment variables here
+#  environment:
+#    variable1: value1
+
+# you can add packaging information here
+package:
+  include:
+    - lib/**
+
+functions:
+  image:
+    handler: image.handler
+    events:
+      - s3:
+          bucket: acrossthecloud-image-lambda
+          event: s3:ObjectCreated:*
+          rules:
+            - prefix: originals/

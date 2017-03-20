@@ -7,27 +7,24 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha test/*.test.js",
-    "build": "./build.sh",
-    "vagrant:build": "./vagrant_build.sh"
+    "test": "./node_modules/.bin/mocha test/*.test.js"
   },
   "author": "Chen Liang, Matthew Berryman",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.7.20",
     "gm": "^1.23.0",
     "imagemin": "^5.2.2",
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-pngquant": "^5.0.0"
   },
   "devDependencies": {
-    "aws-sdk-mock": "^1.6.1",
+    "aws-sdk-mock": "^1.0.10",
     "chai": "^3.5.0",
-    "mocha": "^3.2.0",
+    "mocha": "^2.4.5",
     "mkdirp": "latest"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:urbanriskmap/image-lambda.git"
+    "url": "git@github.com:slimfancy/image-lambda.git"
   }
 }

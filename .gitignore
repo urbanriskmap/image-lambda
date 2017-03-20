@@ -1,5 +1,4 @@
 build/
 test/out/
 node_modules/
-.idea
-.vagrant
+.serverless/
