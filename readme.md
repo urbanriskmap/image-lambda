@@ -83,25 +83,17 @@ Here is an example of configuration:
 - `resizeOption`: For resizing images, this optional parameter can be set to one of the [ImageMagick geometry operators](https://www.imagemagick.org/script/command-line-processing.php#geometry).
 - `format`: specify a different output format for the image (this parameter only valid for for resizes).
 
-## Create AWS Lambda deployment package
+## Deploy using serverless
 
-As AWS Lambda function actually running on Amazon Linux, if you compile node modules on you local machine which is not Linux system, some binaries (such as [imagemin](https://github.com/imagemin/imagemin) used in this project) might not work after you deploy function to AWS Lambda.
-
-In order to solve this problem, [Vagrant](https://www.vagrantup.com/) is used to provision a Linux machine locally, and the Lambda deployment package is built in this vagrant machine.
-
-A npm script is created to provision the Linux machine and create the deployment zip package.
+This now uses the [serverless](https://github.com/serverless/serverless) framework to deploy the code.
 
 ```
-$ npm run vagrant:build
+serverless deploy
 ```
 
-This command takes a few ten minutes the first time you run it, because it needs to download the Linux image and install node environment in the virtual machine. After this command finished, you can find the zip package in `build/` folder with name `image-lambda.zip`.
-
-If your local operating system is already Linux (such as Ubuntu, CentOS), you can just run below command to build the package:
-
-```
-$ npm run build
-```
+A few caveats:
+* At the moment I haven't parameterised this, so the source directory needs to match between [serverless.yml](serverless.yml) and [config.json](config.json), also the bucket name is manually specified at several locations in [serverless.yml](serverless.yml).
+* The bucket can't already exist prior to the first deploy even in your own account. On my todo list is to review [https://github.com/matt-filion/serverless-external-s3-event](https://github.com/matt-filion/serverless-external-s3-event) as a workaround for that.
 
 ## Contributing
 
