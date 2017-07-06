@@ -19,11 +19,11 @@ service: image-lambda # NOTE: update this with your service name
 
 provider:
   name: aws
-  runtime: nodejs4.3
+  runtime: nodejs6.10
 
 # you can overwrite defaults here
   stage: dev
-  region: ap-southeast-2
+  region: ap-southeast-1
 
   iamRoleStatements:
     -  Effect: "Allow"
@@ -31,14 +31,14 @@ provider:
          - "s3:PutBucketNotification"
          - "s3:ListBucket"
          - "s3:GetObject"
-       Resource: "arn:aws:s3:::acrossthecloud-image-lambda/originals/*"
+       Resource: "arn:aws:s3:::petabencana-image-uploads-dev/originals/*"
     -  Effect: "Allow"
        Action:
          - "s3:PutBucketNotification"
          - "s3:ListBucket"
          - "s3:PutObject"
          - "s3:PutObjectAcl"
-       Resource: "arn:aws:s3:::acrossthecloud-image-lambda/resized/*"
+       Resource: "arn:aws:s3:::petabencana-image-uploads-dev/resized/*"
 
 # you can define service wide environment variables here
 #  environment:
@@ -54,7 +54,7 @@ functions:
     handler: image.handler
     events:
       - s3:
-          bucket: acrossthecloud-image-lambda
+          bucket: petabencana-image-uploads-dev
           event: s3:ObjectCreated:*
           rules:
             - prefix: originals/
