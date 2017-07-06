@@ -26,7 +26,8 @@ Once you deployed **image-lambda** package to AWS Lambda and configured it. When
 ```
 git clone https://github.com/SlimFancy/image-lambda.git
 cd image-lambda
-npm install
+node docker-npm.js install
+serverless deploy
 ```
 
 ## Configuration
