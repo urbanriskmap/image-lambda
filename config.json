@@ -9,6 +9,13 @@
       "format": "jpg",
       "quality": 70,
       "ACL": "public-read"
+    },
+    {
+      "sourceDir": "originals",
+      "targetDir": "resized/large",
+      "format": "jpg",
+      "quality": 70,
+      "ACL": "public-read"
     }
   ]
 }
