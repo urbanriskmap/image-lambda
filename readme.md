@@ -10,7 +10,7 @@ Features:
 - Resize jpg/png based on configuration.
 
 ## Dependencies
-- `node`, version: 4.x
+- `node`, version: 8.10
 - `Vagrant`, Required to build the deployment zip package. If you are already working on Linux system, you don't have to install Vagrant.
 
 ## How it works
