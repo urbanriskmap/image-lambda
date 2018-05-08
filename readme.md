@@ -11,7 +11,7 @@ Features:
 
 ## Dependencies
 - `node`, version: 8.10
-- `Vagrant`, Required to build the deployment zip package. If you are already working on Linux system, you don't have to install Vagrant.
+- `docker`, Required to build the deployment zip package.
 
 ## How it works
 
