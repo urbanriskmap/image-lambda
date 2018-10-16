@@ -12,15 +12,15 @@
   "author": "Chen Liang, Matthew Berryman",
   "license": "MIT",
   "dependencies": {
-    "gm": "^1.23.0",
-    "imagemin": "^5.2.2",
-    "imagemin-mozjpeg": "^6.0.0",
-    "imagemin-pngquant": "^5.0.0"
+    "gm": "^1.23.1",
+    "imagemin": "^6.0.0",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^6.0.0"
   },
   "devDependencies": {
-    "aws-sdk-mock": "^1.0.10",
-    "chai": "^3.5.0",
-    "mocha": "^2.4.5",
+    "aws-sdk-mock": "^4.2.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
     "mkdirp": "latest"
   },
   "repository": {
